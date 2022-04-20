@@ -7,6 +7,17 @@ const data = require('./data');
 
 const MONGODB_URI = 'mongodb://localhost:27017/recipe-app';
 
+let newRecipe = {
+ title: "Burritos",
+ level: "Easy peasy",
+ ingledients: ["burrito", "tomate", "avocado", "cheese"],
+ cuisine: "Mexican",
+ dishType: "Dinner",
+ image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Burrito.JPG",
+ duration: 10,
+ creator: "Cris",
+}
+
 // Connection to the database "recipe-app"
 mongoose
   .connect(MONGODB_URI)
