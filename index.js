@@ -39,6 +39,9 @@ mongoose
   .then((result) => {
     return Recipe.findByIdAndDelete({title:"Carrot Cake"})
   })
-  .catch(error => {
+  .then((result) => {
+    return mongoose.connection.close()
+  })
+    .catch(error => {
     console.error('Error connecting to the database', error);
   });
